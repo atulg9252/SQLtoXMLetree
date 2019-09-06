@@ -1,5 +1,5 @@
 '''
-Created on April 4, 2019
+Created on Spet 6, 2019
 Created By: Atul Guleria
 This script takes SQL query as argument and stores the SQL result to a XML file in a bucket
 Arguments:
