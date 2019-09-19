@@ -58,10 +58,8 @@ def run():
                             
         """Reading all detail records from SQL in pandas Dataframe  -- in this case we are using Bigquery as Input SQL source"""
         df_detail_stg= pandas.read_gbq(readfileasstring(sql_query_folder+detail_sql_file), project_id=<PROJECT_ID>, dialect='standard')
-        df_detail= df_detail_stg.replace(np.nan, '', regex=True)
         """Reading audit data from audit SQL in pandas Dataframe"""
         df_audit_stg= pandas.read_gbq(readfileasstring(sql_query_folder+audit_sql_file), project_id=<PROJECT_ID>, dialect='standard') 
-        df_audit= df_audit_stg.replace(np.nan, '', regex=True)      
         i = 0
         """Creating root elements and record tags for XML"""
         root = ET.Element("aaa_ncnu_billing")
